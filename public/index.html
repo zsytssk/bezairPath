@@ -77,19 +77,5 @@
     </style>
   </head>
 
-  <body>
-    <% if (webpackConfig.mode === "production") { %>
-    <script type="text/javascript">
-      function loadLib(url) {
-        var script = document.createElement("script");
-        script.async = false;
-        script.src = url;
-        document.body.appendChild(script);
-      }
-
-      var CDN_VERSION = "20202406195248";
-      loadLib("./js/bundle.js?v=" + CDN_VERSION);
-    </script>
-    <% } %>
-  </body>
+  <body></body>
 </html>

@@ -53,7 +53,7 @@ const common_config = (mode) => ({
     }),
     new WebpackBar({ color: "green" }),
     new HtmlWebpackPlugin({
-      inject: mode === "development",
+      hash: true,
       title: "HonorMe",
       template: "public/index.html",
     }),
