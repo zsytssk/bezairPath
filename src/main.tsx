@@ -18,22 +18,29 @@ function App() {
   const ref = useRef<Skeleton>();
   useEffect(() => {
     setInterval(() => {
-      if (!ref.current) {
+      const node = ref.current;
+      if (!node) {
         return;
       }
       const { pos, is_complete } = displace.update(1);
       if (is_complete) {
         return;
       }
-      ref.current.x = pos.x;
-      ref.current.y = pos.y;
-      ref.current.scaleX = -1;
+      node.graphics.drawRect(0, 0, node.width, node.height, "#fff");
+      node.x = pos.x;
+      node.y = pos.y;
+      node.scaleX = -1;
     }, 1000 / 60);
   }, []);
 
   return (
     <>
-      <SkeletonPlayer ref={ref as any} url="ani/fish/fish1.sk" />
+      <SkeletonPlayer
+        ref={ref}
+        url="ani/fish/fish1.sk"
+        width={100}
+        height={100}
+      />
     </>
   );
 }

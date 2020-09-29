@@ -95,7 +95,7 @@ const dev_config = {
 };
 
 const prod_config = {
-  entry: ["./src/main.ts"],
+  entry: ["./src/main.tsx"],
 };
 
 module.exports = (env, argv) => {
