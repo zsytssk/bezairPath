@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "experimentalDecorators": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "target": "es6",
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true,
+        "noEmitHelpers": false,
+        "noEmit": true,
+        "sourceMap": true,
+        "watch": true,
+        "jsx": "react",
+        "esModuleInterop": true,
+        "baseUrl": "./",
+        "paths": {
+            "*": ["node_modules/*", "libs/*", "src/*", "test/*", "library/*"]
+        }
+    },
+    "include": ["./src", "./libs", "./test", "./library"]
+}
